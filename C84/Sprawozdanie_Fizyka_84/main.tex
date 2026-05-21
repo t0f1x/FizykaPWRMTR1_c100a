@@ -1,0 +1,363 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[left=1.5cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}    %  (ą, ł, ś)
+\usepackage[utf8]{inputenc} %  UTF-8
+\usepackage[colorlinks=true, linkcolor=black,citecolor=black]{hyperref}
+\usepackage[polish]{babel}
+\usepackage[polish]{cleveref}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\documentclass[12pt]{article}
+\crefname{figure}{Rys.}{Rys.}
+\Crefname{figure}{Rys.}{Rys.}
+\crefname{section}{Rozd.}{Rozdziały}
+\Crefname{section}{Rozd.}{Rozdziały}
+
+
+\title{\includegraphics[width=0.5\textwidth]{obrazy/logo-pwr-wm.png}\\[0.2cm] \Huge Sprawozdanie z Fizyki \\[0.2cm] \Huge Ćwiczenie 84}
+\author{\Large t0f1x }
+\date{Wrocław, xx.xx.2026, Grupa nr. x}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Wstęp}
+\label{Wstep}
+Ćwiczenie ma na celu potwierdzenie faktu falowej natury światła poprzez powielenie doświadczenia, które wykonał Thomas Young. Pierwsza część ćwiczenia polega na wyznaczeniu długości fali emisji lasera lub innego źródła światła monochromatycznego, porównanie w tablicach koloru lasera wynikającego z wyników z rzeczywistym kolorem. Wyznaczenie stałej siatki dyfrakcyjnej to druga część ćwiczenia. Na podstawie obliczeń stałej wyznaczyć ilość szczelin w siatce. Podczas ćwiczenia będą wykonane pomiary, a później obliczone zostaną niepewności pomiarowe, błędy przypadkowe a także błędy systematyczne. Środki pomiarowe wyposażone są w skalę o rozdzielczości 1 mm, czyli odczyt jest możliwy z dokładnością do 0.5 mm.
+\section{Wyniki}
+
+%Tabela 1
+    \begin{table}[h]
+    \centering
+    \caption{Wyniki pomiarów dla części eksperymentalnej “A“}
+    \renewcommand{\arraystretch}{1.5}
+    \def\thickline{\noalign{\hrule height 1.5pt}}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{$L_i$ (mm)} & \textbf{$u(L_i)$ (mm)} & \textbf{$n$} & \textbf{$x_{lni}$ (mm)} & \textbf{$u(x_{lni})$ (mm)} & \textbf{$x_{pni}$ (mm)} & \textbf{$u(x_{pni})$ (mm)} \\ \thickline
+    \multirow{3}{*}{300} & \multirow{3}{*}{ \ 0.3} & 1 & 10 & \multirow{3}{*}{ \ 0.3} & 10 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 18 & & 18 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 27 & & 27 & \\ \thickline
+    \multirow{3}{*}{320} & \multirow{3}{*}{ \ 0.3} & 1 & 10  & \multirow{3}{*}{ \ 0.3} & 10 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 19 & & 19 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 30 & & 30 & \\ \thickline
+    \multirow{3}{*}{340} & \multirow{3}{*}{ \ 0.3} & 1 & 10 & \multirow{3}{*}{ \ 0.3} & 10 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 20 & & 20 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 32 & & 32 & \\ \thickline
+    \multirow{3}{*}{360} & \multirow{3}{*}{ \ 0.3} & 1 & 12 & \multirow{3}{*}{ \ 0.3} & 12 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 22 & & 22 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 34 & & 34 & \\ \thickline
+    \multirow{3}{*}{380} & \multirow{3}{*}{ \ 0.3} & 1 & 13 & \multirow{3}{*}{ \ 0.3} & 13 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 24 & & 24 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 35 & & 35 & \\ \thickline
+    \multirow{3}{*}{400} & \multirow{3}{*}{ \ 0.3} & 1 & 13 & \multirow{3}{*}{ \ 0.3} & 13 & \multirow{3}{*}{ \ 0.3} \\ \cline{3-4} \cline{6-6}
+     &  & 2 & 25 & & 25 & \\ \cline{3-4} \cline{6-6}
+     &  & 3 & 37 & & 37 & \\ \thickline
+    \multicolumn{7}{|c|}{Siatka "A" posiada 50 linii/mm} \\ \hline
+    \multicolumn{7}{|c|}{Stała siatki "A": \quad $d(\text{mm})= 0.02$} \\ \hline
+    \end{tabular}
+    \end{table}
+\newpage
+%Tabela 2
+        \begin{table}[h]
+        \centering
+        \label{tab2}
+        \def\thickline{\noalign{\hrule height 1.5pt}}
+        \caption{Wyniki obliczeń dla części eksperymentalnej “A“}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $L_{n,i}$ (mm) & $u(L_i)$ (mm) & $\bar{x}_{n,i}$ (mm) & $u(\bar{x}_{n,i})$ (mm) & $\sin \theta_{n,i}$ & $u(\sin \theta_{n,i})$ & $\lambda_{n,i}$ (nm) \\ \thickline
+        
+        % L = 300
+        \multirow{3}{*}{300} & \multirow{3}{*}{$ \ 0.3$} &10 & \multirow{3}{*}{$ \ 0.2$} & 0.03331 &0.00067 &666.2 \\ \cline{3-3} \cline{5-7} 
+                             &                              &18 &                       &0.05989 &0.00066 &598.9 \\ \cline{3-3} \cline{5-7}
+                             &                              &27 &                       &0.08964 &0.00066 &597.6 \\ \thickline
+        
+        % L = 320
+        \multirow{3}{*}{320} & \multirow{3}{*}{$ \ 0.3$} &10 & \multirow{3}{*}{$ \ 0.2$} & 0.03123 &0.00062&624.6 \\ \cline{3-3} \cline{5-7}
+                             &                              &19 &                       &0.05927 &0.00062 &592.7 \\ \cline{3-3} \cline{5-7}
+                             &                              &30 &                       &0.09334 &0.00061 &622.3 \\ \thickline
+        
+        % L = 340
+        \multirow{3}{*}{340} & \multirow{3}{*}{$ \ 0.3$} &10 & \multirow{3}{*}{$ \ 0.2$} &0.02940 &0.00059 &588.0 \\ \cline{3-3} \cline{5-7}
+                             &                              &20 &                       &0.05872 &0.00058 &587.2 \\ \cline{3-3} \cline{5-7}
+                             &                              &32 &                       &0.09371 &0.00058 &624.7 \\ \thickline
+        
+        % L = 360
+        \multirow{3}{*}{360} & \multirow{3}{*}{$ \ 0.3$} &12 & \multirow{3}{*}{$ \ 0.2$} &0.03331 &0.00055 &666.2 \\ \cline{3-3} \cline{5-7}
+                             &                              &22 &                       &0.06099 &0.00055 &609.9 \\ \cline{3-3} \cline{5-7}
+                             &                              &34 &                       &0.09402 &0.00054 &626.8 \\ \thickline
+        
+        % L = 380
+        \multirow{3}{*}{380} & \multirow{3}{*}{$ \ 0.3$} &13 & \multirow{3}{*}{$ \ 0.2$} &0.03419 &0.00052 &683.8 \\ \cline{3-3} \cline{5-7}
+                             &                              &24 &                       &0.06303 &0.00052 &630.3 \\ \cline{3-3} \cline{5-7}
+                             &                              &35 &                       &0.09172 &0.00051 &611.5 \\ \thickline
+        
+        % L = 400
+        \multirow{3}{*}{400} & \multirow{3}{*}{$ \ 0.3$} &13 & \multirow{3}{*}{$ \ 0.2$} &0.03248 &0.00050 &649.6 \\ \cline{3-3} \cline{5-7}
+                             &                              &25 &                       &0.06238 &0.00049 &623.8 \\ \cline{3-3} \cline{5-7}
+                             &                              &37 &                       &0.09210 &0.00050 &614.0 \\ \thickline
+        
+        \multicolumn{6}{|c|}{Wartość średnia: \quad $\bar{\lambda}(\text{nm})=$} &628.2 \\ \hline
+        \multicolumn{6}{|c|}{Odchylenie standardowe: \quad $u(\bar{\lambda})(\text{nm})=$} &6.5 \\ \hline
+        \end{tabular}
+        \end{table}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.65\linewidth]{obrazy/Wykres 1.png}
+    \caption{Zależność $\sin\Theta$ od rzędu maksimum $n$ dla siatki dyfrakcyjnej A}
+    \label{fig:wykres1}
+\end{figure}
+\newpage
+%Tabela 3
+    \begin{table}[h]
+    \centering
+    \caption{Wyniki pomiarów dla części eksperymentalnej “B“}
+    \renewcommand{\arraystretch}{1.35}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $L_i$ (mm) & $u(L_i)$ (mm) & $x_{li}$ (mm) & $u(x_{li})$ (mm) & $x_{pi}$ (mm) & $u(x_{pi})$ (mm) \\ \hline
+    50&\multirow{11}{*}{ \ 0.3} &10 &\multirow{11}{*}{ \ 0.3} &10 &\multirow{11}{*}{ \ 0.3} \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    60& &15 & &15 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    70& &19 & &19 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    80& &21 & &21 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    90& &25 & &25 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    100& &28 & &30 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    110& &33 & &34 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    120& &35 & &36 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    130& &38 & &40 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    140& &43 & &44 & \\ \cline{1-1} \cline{3-3} \cline{5-5}
+    150& &45 & &47 & \\ \hline
+    \end{tabular}
+    \end{table}
+%Tabela 4
+        \begin{table}[h]
+            \centering
+            \def\thickline{\noalign{\hrule height 1.5pt}}
+            \caption{Wyniki obliczeń dla części eksperymentalnej “B“}
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{|>{\centering\arraybackslash}p{2.5cm} | >{\centering\arraybackslash}p{2.5cm} | >{\centering\arraybackslash}p{2.5cm} | >{\centering\arraybackslash}p{2.5cm} |}
+            \hline
+            $\bar{x}_i$ (mm) & $u(\bar{x}_i)$ (mm) & $\sin \theta_i$ & $u_c(\sin \theta_i)$ \\ \hline
+             10.5& \multirow{11}{*}{ \ 0.2}&0.20552 & 0.00384\\ \cline{1-1} \cline{3-4}
+             15& &0.24254 & 0.00315\\ \cline{1-1} \cline{3-4}
+             19& &0.26195 & 0.00267 \\ \cline{1-1} \cline{3-4}
+             21& &0.25390 &0.00236 \\ \cline{1-1} \cline{3-4}
+             25& &0.26764 & 0.00209\\ \cline{1-1} \cline{3-4}
+             29& &0.27852 &0.00188 \\ \cline{1-1} \cline{3-4}
+             33.5& &0.29133 &0.00171 \\ \cline{1-1} \cline{3-4}
+             35.5& &0.28368 &0.00157 \\ \cline{1-1} \cline{3-4}
+             39& &0.28735 &0.00145 \\ \cline{1-1} \cline{3-4}
+             43.5& &0.29361 &0.00135 \\ \cline{1-1} \cline{3-4}
+             46& &0.29319 & 0.00126\\ \cline{1-1} \thickline
+            \multicolumn{2}{|l}{Wartość średnia:} & $\overline{\sin\theta} =$ & 0.26902 \\ \hline
+            \multicolumn{2}{|l}{Odchylenie standardowe:} & $u(\overline{\sin\theta}) =$ & 0.00795 \\ \hline
+            \multicolumn{2}{|l}{} & $d \ (\mu\text{m}) =$ & 2.335 \\ \hline
+            \multicolumn{2}{|l}{} & $u_c(d) \ (\mu\text{m}) =$ & 0.073  \\ \hline
+            \end{tabular}
+        \end{table}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.65\linewidth]{obrazy/Wykres 2.png}
+    \caption{Wyznaczenie wartości $\sin\Theta$ dla siatki dyfrakcyjnej B}
+    \label{fig:wykres2}
+\end{figure}
+\newpage
+\section{Obliczenia}
+    \subsection{Obliczenia dla części “A“}
+        \subsubsection{\centering Niepewność standardowa typu B dla pomiarów \(L_i, \ x_n\)}
+            \begin{flalign*}
+                u_B=\sqrt{\frac{\bigtriangleup_p^2}{3}}=\frac{0.5}{\sqrt{3}}=0.288675 \ [mm] \approx 0.3 \ [mm]  &&
+            \end{flalign*}
+
+        \subsubsection{\centering Wartość średnia  \(\bar{x}_{n,i}\) i jej niepewność \(u(\bar{x}_{n,i})\)}
+                   \(\ \bar{x}_{n,i} = \frac{{x}_{nli}+{x}_{npi}}{2} = \) \ jedna z wartości $x_{ni}$ \ (\cref{wnioski})*; \  \( u(\bar{x}_{n,i})= \frac{1}{2}\sqrt{u^2(x_p)+u^2(x_l)}=\frac{\sqrt{2}}{2}(0.3) \approx 0.2 \ [mm] \) &&
+    
+                \subsubsection{\centering Wartość \(\sin \Theta_{n,i}\) i niepewnośc \(\ u_c(\sin \Theta_{n,i})\) }
+                \begin{flalign*}
+                \sin \Theta_{n,i} = \frac{\bar{x}_{n,i}}{\sqrt{\bar{x}_{n,i}^2 + L_i^2}} ; &&
+                \end{flalign*}
+        
+                \begin{flalign*}
+                \sin \Theta_{1,1} = \frac{10}{\sqrt{10^2 + 300^2}} = 0.03331; \ \sin \Theta_{2,1} = \frac{18}{\sqrt{18^2 + 300^2}} = 0.05989; \ \sin \Theta_{3,1} = \frac{27}{\sqrt{27^2 + 300^2}} = 0.08964; &&
+                \end{flalign*}
+                \begin{flalign*}
+                \sin \Theta_{1,2} = \frac{10}{\sqrt{10^2 + 320^2}} = 0.03123; \ \sin \Theta_{2,2} = \frac{19}{\sqrt{19^2 + 320^2}} = 0.05927; \ \sin \Theta_{3,2} = \frac{30}{\sqrt{30^2 + 320^2}} = 0.09334; &&
+                \end{flalign*}
+                \begin{flalign*}
+                \sin \Theta_{1,3} = \frac{10}{\sqrt{10^2 + 340^2}} = 0.02940; \ \sin \Theta_{2,3} = \frac{20}{\sqrt{20^2 + 340^2}} = 0.05872; \ \sin \Theta_{3,3} = \frac{32}{\sqrt{32^2 + 340^2}} = 0.09371; &&
+                \end{flalign*}
+                \begin{flalign*}
+                \sin \Theta_{1,4} = \frac{12}{\sqrt{12^2 + 360^2}} = 0.03331; \ \sin \Theta_{2,4} = \frac{22}{\sqrt{22^2 + 360^2}} = 0.06099 ; \ \sin \Theta_{3,4} = \frac{34}{\sqrt{34^2 + 360^2}} = 0.09402; &&
+                \end{flalign*}
+                \begin{flalign*}
+                \sin \Theta_{1,5} = \frac{13}{\sqrt{13^2 + 380^2}} = 0.03419; \ \sin \Theta_{2,5} = \frac{24}{\sqrt{24^2 + 380^2}} = 0.06303; \ \sin \Theta_{3,5} = \frac{35}{\sqrt{35^2 + 380^2}} = 0.09172; &&
+                \end{flalign*}
+                \begin{flalign*}
+                \sin \Theta_{1,6} = \frac{13}{\sqrt{13^2 + 400^2}} = 0.03248; \ \sin \Theta_{2,6} = \frac{25}{\sqrt{25^2 + 400^2}} = 0.06238; \ \sin \Theta_{3,6} = \frac{37}{\sqrt{37^2 + 400^2}} = 0.09210; &&
+                \end{flalign*}
+            \begin{flalign*}
+                u_c(\sin \Theta_{n,i}) = \sqrt{\left(\frac{L_i \bar{x}_{n,i}}{(L_i^2 + \bar{x}_{n,i}^2)^{3/2}}\right)^2 u^2(L) + \left(\frac{L_i^2}{(L_i^2 + \bar{x}_{n,i}^2)^{3/2}}\right)^2 u^2(\bar{x}_{n,i})} &&
+            \end{flalign*}
+
+            \begin{flalign*}
+                u(\sin \Theta_{1,1}) &= \sqrt{\left(\frac{300 \cdot 10}{(300^2 + 10^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{300^2}{(300^2 + 10^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00067; && \\
+                u(\sin \Theta_{2,1}) &= \sqrt{\left(\frac{300 \cdot 18}{(300^2 + 18^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{300^2}{(300^2 + 18^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00066; && \\
+                u(\sin \Theta_{3,1}) &= \sqrt{\left(\frac{300 \cdot 27}{(300^2 + 27^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{300^2}{(300^2 + 27^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00066; && \\[10pt]
+                u(\sin \Theta_{1,2}) &= \sqrt{\left(\frac{320 \cdot 10}{(320^2 + 10^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{320^2}{(320^2 + 10^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00062; && \\
+                u(\sin \Theta_{2,2}) &= \sqrt{\left(\frac{320 \cdot 19}{(320^2 + 19^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{320^2}{(320^2 + 19^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00062; && \\
+                u(\sin \Theta_{3,2}) &= \sqrt{\left(\frac{320 \cdot 30}{(320^2 + 30^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{320^2}{(320^2 + 30^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00061; && \\[10pt]
+                u(\sin \Theta_{1,3}) &= \sqrt{\left(\frac{340 \cdot 10}{(340^2 + 10^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{340^2}{(340^2 + 10^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00059; && \\
+                u(\sin \Theta_{2,3}) &= \sqrt{\left(\frac{340 \cdot 20}{(340^2 + 20^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{340^2}{(340^2 + 20^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00058; && \\
+                u(\sin \Theta_{3,3}) &= \sqrt{\left(\frac{340 \cdot 32}{(340^2 + 32^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{340^2}{(340^2 + 32^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00058; && \\[10pt]
+                u(\sin \Theta_{1,4}) &= \sqrt{\left(\frac{360 \cdot 12}{(360^2 + 12^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{360^2}{(360^2 + 12^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00055; && \\
+                u(\sin \Theta_{2,4}) &= \sqrt{\left(\frac{360 \cdot 22}{(360^2 + 22^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{360^2}{(360^2 + 22^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00055; && \\
+                u(\sin \Theta_{3,4}) &= \sqrt{\left(\frac{360 \cdot 34}{(360^2 + 34^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{360^2}{(360^2 + 34^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00054; && \\[10pt]
+                u(\sin \Theta_{1,5}) &= \sqrt{\left(\frac{380 \cdot 13}{(380^2 + 13^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{380^2}{(380^2 + 13^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00052; && \\
+                u(\sin \Theta_{2,5}) &= \sqrt{\left(\frac{380 \cdot 24}{(380^2 + 24^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{380^2}{(380^2 + 24^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00052; && \\
+                u(\sin \Theta_{3,5}) &= \sqrt{\left(\frac{380 \cdot 35}{(380^2 + 35^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{380^2}{(380^2 + 35^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00051; && \\[10pt]
+                u(\sin \Theta_{1,6}) &= \sqrt{\left(\frac{400 \cdot 13}{(400^2 + 13^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{400^2}{(400^2 + 13^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00050; && \\
+                u(\sin \Theta_{2,6}) &= \sqrt{\left(\frac{400 \cdot 25}{(400^2 + 25^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{400^2}{(400^2 + 25^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00049; && \\
+                u(\sin \Theta_{3,6}) &= \sqrt{\left(\frac{400 \cdot 37}{(400^2 + 37^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{400^2}{(400^2 + 37^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00050; &&
+            \end{flalign*}
+            
+        \subsubsection{\centering Długość fali emisji światła  \(\ \lambda_{n,i} \), średnia wartość \ \(\overline{\lambda}\) i niepewność \(u_A(\overline{\lambda})\)  }
+            \begin{flalign*}
+                \lambda_{n,i} = \frac{d \cdot \sin \Theta_{n,i}}{n} &&
+            \end{flalign*}
+            \begin{flalign*}
+                \lambda_{1,1} &= \frac{0.02 \cdot 0.03331}{1} = 0.0006662 \cdot 10^6 = 666.2 \ [nm]; && \\
+                \lambda_{2,1} &= \frac{0.02 \cdot 0.05989}{2} = 0.0005989 \cdot 10^6 = 598.9 \ [nm]; && \\
+                \lambda_{3,1} &= \frac{0.02 \cdot 0.08964}{3} = 0.0005976 \cdot 10^6 = 597.6 \ [nm]; && \\[10pt]
+                \lambda_{1,2} &= \frac{0.02 \cdot 0.03123}{1} = 0.0006246 \cdot 10^6 = 624.6 \ [nm]; && \\
+                \lambda_{2,2} &= \frac{0.02 \cdot 0.05927}{2} = 0.0005927 \cdot 10^6 = 592.7 \ [nm]; && \\
+                \lambda_{3,2} &= \frac{0.02 \cdot 0.09334}{3} = 0.0006223 \cdot 10^6 = 622.3 \ [nm]; && \\[10pt]
+                \lambda_{1,3} &= \frac{0.02 \cdot 0.02940}{1} = 0.0005880 \cdot 10^6 = 588.0 \ [nm]; && \\
+                \lambda_{2,3} &= \frac{0.02 \cdot 0.05872}{2} = 0.0005872 \cdot 10^6 = 587.2 \ [nm]; && \\
+                \lambda_{3,3} &= \frac{0.02 \cdot 0.09371}{3} = 0.0006247 \cdot 10^6 = 624.7 \ [nm]; && \\[10pt]
+                \lambda_{1,4} &= \frac{0.02 \cdot 0.03331}{1} = 0.0006662 \cdot 10^6 = 666.2 \ [nm]; && \\
+                \lambda_{2,4} &= \frac{0.02 \cdot 0.06099}{2} = 0.0006099 \cdot 10^6 = 609.9 \ [nm]; && \\
+                \lambda_{3,4} &= \frac{0.02 \cdot 0.09402}{3} = 0.0006268 \cdot 10^6 = 626.8 \ [nm]; && \\[10pt]
+                \lambda_{1,5} &= \frac{0.02 \cdot 0.03419}{1} = 0.0006838 \cdot 10^6 = 683.8 \ [nm]; && \\
+                \lambda_{2,5} &= \frac{0.02 \cdot 0.06303}{2} = 0.0006303 \cdot 10^6 = 630.3 \ [nm]; && \\
+                \lambda_{3,5} &= \frac{0.02 \cdot 0.09172}{3} = 0.0006115 \cdot 10^6 = 611.5 \ [nm]; && \\[10pt]
+                \lambda_{1,6} &= \frac{0.02 \cdot 0.03248}{1} = 0.0006496 \cdot 10^6 = 649.6 \ [nm]; && \\
+                \lambda_{2,6} &= \frac{0.02 \cdot 0.06238}{2} = 0.0006238 \cdot 10^6 = 623.8 \ [nm]; && \\
+                \lambda_{3,6} &= \frac{0.02 \cdot 0.09210}{3} = 0.0006140 \cdot 10^6 = 614.0 \ [nm]; &&
+            \end{flalign*}
+        \begin{flalign*}
+            \overline{\lambda}= \frac{\sum_{n=1}^{n=18}(\lambda_n)}{18} = 628.2 \ [nm] &&
+        \end{flalign*}
+        \begin{flalign*}
+            u_A(\overline{\lambda}) = \sqrt{\sum_{i=1}^{n=18} \frac{(\lambda_i-628.2)^2}{n \cdot (n-1)}} = 6.5 \ [nm] &&
+        \end{flalign*}
+
+\newpage
+\subsection{Obliczenia dla części “B“}
+    \subsubsection{\centering Niepewność standardowa typu B dla pomiarów \(L_i, \ x_n\)}
+                \begin{flalign*}
+                    u_B=\sqrt{\frac{\bigtriangleup_p^2}{3}}=\frac{0.5}{\sqrt{3}}=0.288675 \ [mm] \approx 0.3 \ [mm]  &&
+                \end{flalign*}
+    \subsubsection{\centering Wartość średnia  \(\bar{x}_{i}\) i jej niepewność \ u(\bar{x}_{i})}        
+        \begin{flalign*}
+        u(\bar{x}_{i})= \frac{1}{2}\sqrt{u^2(x_p)+u^2(x_l)}=\frac{\sqrt{2}}{2}(0.3) \approx 0.2 \ [mm] &&
+        \end{flalign*}
+        \begin{flalign*}
+            \bar{x}_{i} = \frac{{x}_{nli}+{x}_{npi}}{2}; &&
+        \end{flalign*}
+        
+        \begin{flalign*}
+        \bar{x}_{1} &= \frac{10 + 11}{2} = 10.5 \ [mm]; \quad \bar{x}_{2} = \frac{15 + 15}{2} = 15.0 \ [mm]; \quad \bar{x}_{3} = \frac{19 + 19}{2} = 19.0 \ [mm]; \quad \bar{x}_{4} = \frac{21 + 21}{2} = 21.0 \ [mm]; && \\
+        \bar{x}_{5} &= \frac{25 + 25}{2} = 25.0 \ [mm]; \quad \bar{x}_{6} = \frac{28 + 30}{2} = 29.0 \ [mm]; \quad \bar{x}_{7} = \frac{33 + 34}{2} = 33.5 \ [mm]; \quad \bar{x}_{8} = \frac{35 + 36}{2} = 35.5 \ [mm]; && \\[10pt]
+        \bar{x}_{9} &= \frac{38 + 40}{2} = 39.0 \ [mm]; \quad \bar{x}_{10} = \frac{43 + 44}{2} = 43.5 \ [mm]; \quad \bar{x}_{11} = \frac{45 + 47}{2} = 46.0 \ [mm]; &&
+        \end{flalign*}
+    
+        \subsubsection{\centering Wartość sinusa \(\sin \Theta_{i}\) i niepewność \(\ u_c(\sin \Theta_{n,i})\) }
+        \begin{flalign*}
+        \sin \theta_{1} &= \frac{10.5}{\sqrt{10.5^2 + 50^2}} = 0.20552; \quad \sin \theta_{2} = \frac{15.0}{\sqrt{15.0^2 + 60^2}} = 0.24254; \quad \sin \theta_{3} = \frac{19.0}{\sqrt{19.0^2 + 70^2}} = 0.26195; && \\
+        \sin \theta_{4} &= \frac{21.0}{\sqrt{21.0^2 + 80^2}} = 0.25390; \quad \sin \theta_{5} = \frac{25.0}{\sqrt{25.0^2 + 90^2}} = 0.26764; \quad \sin \theta_{6} = \frac{29.0}{\sqrt{29.0^2 + 100^2}} = 0.27852; && \\[10pt]
+        \sin \theta_{7} &= \frac{33.5}{\sqrt{33.5^2 + 110^2}} = 0.29133; \quad \sin \theta_{8} = \frac{35.5}{\sqrt{35.5^2 + 120^2}} = 0.28368; \quad \sin \theta_{9} = \frac{39.0}{\sqrt{39.0^2 + 130^2}} = 0.28735; && \\
+        \sin \theta_{10} &= \frac{43.0}{\sqrt{43.0^2 + 140^2}} = 0.29361; \quad \sin \theta_{11} = \frac{46.0}{\sqrt{46.0^2 + 150^2}} = 0.29319; &&
+        \end{flalign*}
+        
+            \begin{flalign*}
+                u_c(\sin \Theta_{i}) = \sqrt{\left(\frac{L_i \bar{x}_{i}}{(L_i^2 + \bar{x}_{i}^2)^{3/2}}\right)^2 u^2(L) + \left(\frac{L_i^2}{(L_i^2 + \bar{x}_{i}^2)^{3/2}}\right)^2 u^2(\bar{x}_{i})} &&
+            \end{flalign*}
+            \begin{flalign*}
+                u_c(\sin \Theta_{1}) &= \sqrt{\left(\frac{50 \cdot 10.5}{(50^2 + 10.5^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{50^2}{(50^2 + 10.5^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00384; && \\
+                u_c(\sin \Theta_{2}) &= \sqrt{\left(\frac{60 \cdot 15.0}{(60^2 + 15.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{60^2}{(60^2 + 15.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00315; && \\
+                u_c(\sin \Theta_{3}) &= \sqrt{\left(\frac{70 \cdot 19.0}{(70^2 + 19.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{70^2}{(70^2 + 19.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00267; && \\
+                u_c(\sin \Theta_{4}) &= \sqrt{\left(\frac{80 \cdot 21.0}{(80^2 + 21.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{80^2}{(80^2 + 21.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00236; && \\
+                u_c(\sin \Theta_{5}) &= \sqrt{\left(\frac{90 \cdot 25.0}{(90^2 + 25.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{90^2}{(90^2 + 25.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00209; && \\
+                u_c(\sin \Theta_{6}) &= \sqrt{\left(\frac{100 \cdot 29.0}{(100^2 + 29.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{100^2}{(100^2 + 29.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00188; && \\
+                u_c(\sin \Theta_{7}) &= \sqrt{\left(\frac{110 \cdot 33.5}{(110^2 + 33.5^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{110^2}{(110^2 + 33.5^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00171; && \\
+                u_c(\sin \Theta_{8}) &= \sqrt{\left(\frac{120 \cdot 35.5}{(120^2 + 35.5^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{120^2}{(120^2 + 35.5^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00157; && \\
+                u_c(\sin \Theta_{9}) &= \sqrt{\left(\frac{130 \cdot 39.0}{(130^2 + 39.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{130^2}{(130^2 + 39.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00145; && \\
+                u_c(\sin \Theta_{10}) &= \sqrt{\left(\frac{140 \cdot 43.0}{(140^2 + 43.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{140^2}{(140^2 + 43.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00135; && \\
+                u_c(\sin \Theta_{11}) &= \sqrt{\left(\frac{150 \cdot 46.0}{(150^2 + 46.0^2)^{3/2}}\right)^2 \cdot 0.3^2 + \left(\frac{150^2}{(150^2 + 46.0^2)^{3/2}}\right)^2 \cdot 0.2^2} = 0.00126; &&
+            \end{flalign*}
+\subsubsection{\centering Wartość średnia \(\ \overline{\sin \Theta_{i}}\) i niepewność \(\ u(\overline{\sin \Theta_{i}})\)}
+    \begin{flalign*}
+        \overline{\sin \theta} &= \frac{\sum_{n=1}^{n=1}(\sin \Theta_i)}{11} = \frac{2.95923}{11} = 0.26902; &&
+    \end{flalign*}
+    
+    \begin{flalign*}
+        u(\overline{\sin \theta}) &= \sqrt{\frac{\sum_{i=1}^{11} (\sin \theta_i - \overline{\sin \theta})^2}{11 \cdot (11 - 1)}} = \sqrt{\frac{0.006954}{110}} = \sqrt{0.00006322} = 0.00795; &&
+    \end{flalign*}
+    
+\subsubsection{\centering Wyznaczenie stałej siatki dyfrakcyjnej \(\ d\) i jej niepewność \(\ u_c(d)\) }
+    \begin{flalign*}
+        d &= \frac{\bar{\lambda}}{\overline{\sin \theta}} = \frac{0.0006282\text{ mm}}{0.26902} = 0.0023351\text{ mm} = 0.0023351 \cdot 1000 \ \mu\text{m} = 2.335 \ [\mu\text{m}]; &&
+    \end{flalign*}
+    \begin{flalign*}
+        u_c(d) &= \sqrt{\left(\frac{1}{0.26902}\right)^2 \cdot (0.0000065)^2 + \left(\frac{1 \cdot 0.0006282}{0.26902^2}\right)^2 \cdot (0.00795)^2} && \\
+        &= \sqrt{5.838 \cdot 10^{-10} + 4.762 \cdot 10^{-9}} = \sqrt{5.346 \cdot 10^{-9}} = 0.0000731 \ [mm] = 0.073 \ [\mu\text{m}]; &&
+    \end{flalign*}
+\subsubsection{\centering Wyznaczenie ilości szczelin \(\ N\)}
+    \begin{flalign*}
+        N = \frac{1}{d}=\frac{1}{0.0023351\text{ mm}} \approx 428.25 \text{ linii/mm} ; &&
+    \end{flalign*}
+\newpage
+\section{Wnioski}
+\label{wnioski}
+Podczas ćwiczenia laboratoryjnego były wykorzystane: transmisyjne siatki dyfrakcyjne 2 typów, laser, ekran ze skalą milimetrową, ława optyczna ze skalą milimetrową, szczelina.
+W obu częściach ćwiczenia pomiary były przeprowadzone z dokładnością odczytu 0.5 mm. Niepewności związane z przyrządami pomiarowymi(typ B) są sobie równe. \\ \\
+Podczas pomiarów \(x_{p}\) i \(x_{l}\) w części “A“ wartości po prawej i lewej stronie się zgodziły, dlatego średnią dla każdego \(x_n\) jest jedna z wartości, co zostało umieszczone w tabeli 2 \ (\cref{tab2}). Na skutek obliczeń uzyskano średnią długość fali \(\overline{\lambda}= 628.2 \ [nm]\), wynik został porównany z tablicą \cite[str. 219]{Tabf} i znajduje się w zakresie czerwonego koloru \(620-760\ [nm]\) co odpowiada rzeczywistemu kolorowi wykorzystanego lasera. \\ \\ 
+Część “B“ polega na wyznaczeniu stałej siatki dyfrakcyjnej “B“, do jej wyznaczenia wykorzystano dane o długości fali z części “A“, wynik został wykorzystany do wyznaczenia ilości szczelin w siatce \(N= 428.25 \ [linii/mm]\). \\ \\
+Niepewności, które były obliczone świadczą o wysokiej dokładności pomiarów i obliczeń. Wykresy \cref{fig:wykres1}, \cref{fig:wykres2} pokazują zależności, związane ze wszystkimi obliczeniami. Umieścić pola niepewności na wykresie nr. 1 było niemożliwie, ponieważ są one niewielkie, a skala nie pozwala na ich zobrazowanie w sposób czytelny. Natomiast na wykresie nr. 2 zostały one pokazane.
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        Parametr & Część A & Część B \\ \hline
+        Wartość średnia $\bar{\lambda}$ & 628.2 [nm] & 628.2 [nm] \\ \hline
+        Odchylenie standardowe $u(\bar{\lambda})$ & 6.5 [nm] & 6.5 [nm] \\ \hline
+        Wartość średnia $\overline{\sin\theta}$ & - & 0.26902 \\ \hline
+        Odchylenie standardowe $u(\overline{\sin\theta})$ & - & 0.00795 \\ \hline
+        Stała siatki dyfrakcyjnej $d$ & 0.02 [mm]  & 2.335 [$\mu$m] \\ \hline
+        Niepewność złożona $u_c(d)$ & - & 0.073 [$\mu$m] \\ \hline
+        Liczba szczelin $N$ & - & 428.25 [linii/mm] \\ \hline
+    \end{tabular}
+    \caption{Wyniki końcowe dla części A i B}
+    \label{tab:wyniki}
+\end{table}
+
+\vfill
+\normalsize
+\addcontentsline{toc}{section}{Literatura}
+\begin{thebibliography}{9}
+    \bibitem{Niepewnosci} 
+    Ryszard Poprawski,Włodzimierz Salejda, \textit{Ćwiczenia laboratoryjne z Fizyki, cz. 1}, Oficyna Wydawnicza Politechniki Wrocławskiej, Wrocław 2002.
+    \bibitem{Tabf} 
+    Tomasz Szymczyk, Stanisław Rabiej, Anna Pielesz, Jan Desselberger, \textit{Tablice matematyczne, fizyczne, chemiczne,  astronomiczne}, Świat Książki, Warszawa 2003.
+    
+\end{thebibliography}
+\end{document}
